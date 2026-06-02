@@ -149,7 +149,7 @@ MEDIA_ROOT = BASE_DIR / 'media' #if user want to upload, uploaded this address
 
 AWS_SERVICE_NAME = 's3'
 AWS_ACCESS_KEY_ID = 'a6cca2b7-d75b-4c7b-9259-7c5008b39e91'
-AWS_SECRET_ACCESS_KEY = 'a62f53a906a234f4b210583788e01e856bf09cf4774243ef06d3547d2e84ccec'
+AWS_SECRET_ACCESS_KEY = ''
 AWS_S3_ENDPOINT_URL = 'https://s3.ir-tbz-sh1.arvanstorage.ir'
 AWS_BUCKET_NAME = 'asfsafgerge'
 AWS_LOCAL_STORAGE = f"{BASE_DIR}/aws/"
