@@ -1,0 +1,21 @@
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a href="{% url 'home:home' %}" class="nav-link active">Home</a>  </li>
+            {% if request.user.is_authenticated %}
+            
+          
+                <li class="navbar-item"><a href="{% url 'accounts:user_logout' %}" class="nav-link active">Logout</a>  </li>
+                <li class="navbar-item"><a href="{% url 'accounts:upload_avatar' %}" class="nav-link active">Avatar</a>  </li>
+            {% else %}
+                <li class="navbar-item"><a href="{% url 'accounts:user_register' %}" class="nav-link active">Register</a></li>
+                <li class="navbar-item"><a href="{% url 'accounts:user_login' %}" class="nav-link active">Login</a></li>
+            {% endif %}
+            {% if request.user.is_admin %}
+                <li class="navbar-item"><a href="{% url 'home:bucket' %}" class="nav-link active">Bucket</a></li>
+            {% endif %}
+                <li class="navbar-item"><a href="{% url 'orders:cart' %}" class="nav-link active">CART {{ cart|length }}</a>  </li>
+          
+        </ul>
+    </div>
+</nav>
