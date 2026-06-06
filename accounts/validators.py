@@ -9,7 +9,7 @@ MAX_FILE_SIZE = 2 * 1024 * 1024 # 2MB
 ALLOWED_FORMATS = ['JPG', 'JPEG','PNG', 'WEBP']
 
 def avatar_upload_path(instance, filename):
-    ext = filename.split('.')[-1].lower()
+    ext = filename.split('.')[-1].upper()
     if ext not in ALLOWED_FORMATS:
         ext = 'jpg'
     

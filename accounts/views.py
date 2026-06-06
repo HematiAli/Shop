@@ -19,7 +19,7 @@ class UserRegisterView(View):
     template_name = 'accounts/register.html'
 
     def get(self, request):
-        logger.error("register activated")
+        logger.success("register activated")
         return render(request, self.template_name, {'form': self.form_class})
         
 
